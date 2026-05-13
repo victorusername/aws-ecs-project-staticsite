@@ -1,8 +1,8 @@
 #Create a VPC
 resource "aws_vpc" "main" {
   cidr_block           = var.vpc_cidr
-  enable_dns_support   = true # Essencial para o ECS encontrar o ECR depois
-  enable_dns_hostnames = true # Dá nomes amigáveis para as instâncias
+  enable_dns_support   = true 
+  enable_dns_hostnames = true
 
   tags = {
     Name = "${var.project_name}-vpc"
